@@ -2,8 +2,9 @@
 #setwd("~/YEISON/MATERIAS/OCTAVO SEMESTRE/TAE/TRABAJO_2/BASES_DE_DATOS2/BDs")
 
 require(nnet)
+library(car)
 #lectura
-datos<- read.csv("baseUnida.csv")
+datos<- read.csv("BDs/baseUnida.csv")
 
 #eliminar los NA´s en departamento
 datos2<-datos[which(!is.na(datos$P6076S1)),]
@@ -49,7 +50,7 @@ datos3$P5661S4<- as.factor(datos3$P5661S4)
 
 # Variable auxiliar
 var.resp<- as.factor(datos3$P6076S1)
-var2.res<-Recode(var.resp,"c(5,11,15,17,18,25,41,54,63,66,68,73)='ANDINA';c(8,20,23,44,47,70,88)='CARIBE';c(19,27,52,76)='PACIFICA';c(50,81,85,99)='ORINOQUIA';c(86,91,94,95,97)='AMAZONIA'")
+var2.res<-recode(var.resp,"c(5,11,15,17,18,25,41,54,63,66,68,73)='ANDINA';c(8,20,23,44,47,70,88)='CARIBE';c(13,19,27,52,76)='PACIFICA';c(50,81,85,99)='ORINOQUIA';c(86,91,94,95,97)='AMAZONIA'")
 
 
 #paste0(names(datos3),collapse = "+")
@@ -68,7 +69,7 @@ mod.imaginario<-multinom(formula = var2.res ~ P6080 + FEX_C + P4567 + P8520S3 + 
                          data = datos3)
 
 obs<-as.vector(var2.res)
-pre<-as.vector(predict(mod.imaginario,type = "class"))
+pre<-predict(mod.imaginario,type = "prob")
 
 # Ciclo para tasa de bien clasificados
 cont<-0

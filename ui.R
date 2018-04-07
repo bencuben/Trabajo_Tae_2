@@ -49,12 +49,20 @@ shinyUI(div(
                              choices=c("2 - No", "3 - Fallecido"), selected="2 - No"),
                  selectInput(inputId="P5502", label="Situación sentimental actual", 
                              choices=c("1 - No está casado(a) y vive en pareja hace menos de dos años", 
-                                      "2 - No está casado(a) y vive en pareja hace dos años o más", 
-                                      "6 - Está casado(a)"))
+                                       "2 - No está casado(a) y vive en pareja hace dos años o más", 
+                                       "6 - Está casado(a)"))
                  
                )
              )),
     tabPanel(title = "Por región"),
-    tabPanel(title = "Acerca de")
+    tabPanel(title = "Acerca de",
+             h3("Integrantes:"),
+             br(),
+             h4("Yeison Yovani Ocampo Naranjo - Estadística"),
+             h4("Brahian Cano Urrego - Estadística"),
+             h4("Daniel Alexander Cano Cuartas - Ingeniería de Sistemas e Informática"),
+             h4("Sebastián Pino Sanchez - Ingeniería de Sistemas e Informática"),
+             HTML('<iframe width="560" height="315" src="https://www.youtube.com/embed/PXBPiBdgG4M" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>')
+    )
   )
 ))

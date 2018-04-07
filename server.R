@@ -114,4 +114,5 @@ shinyServer(function(input, output) {
     mapaDepartamentos 
     
   })
+  
 })
