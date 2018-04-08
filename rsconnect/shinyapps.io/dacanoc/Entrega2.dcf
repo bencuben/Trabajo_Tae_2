@@ -1,0 +1,13 @@
+name: Entrega2
+title: Entrega2
+username:
+account: dacanoc
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 317412
+bundleId: 1307984
+url: https://dacanoc.shinyapps.io/Entrega2/
+when: 1523151081.8537
+asMultiple: FALSE
+asStatic: FALSE
+ignoredFiles: .firebaserc|.RData
