@@ -114,7 +114,8 @@ shinyUI(div(
 
              )
     ),
-
+    tabPanel(title="Informe",
+             includeHTML('Informe.html')),
     tabPanel(title = "Acerca de",
              h3("Integrantes:"),
              br(),
@@ -124,5 +125,6 @@ shinyUI(div(
              h4("Sebastián Pino Sanchez - Ingeniería de Sistemas e Informática"),
              HTML('<iframe width="560" height="315" src="https://www.youtube.com/embed/PXBPiBdgG4M" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>')
     )
+    
   )
 ))
