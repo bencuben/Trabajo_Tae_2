@@ -115,15 +115,17 @@ shinyUI(div(
              )
     ),
     tabPanel(title="Informe",
-             includeHTML('Informe.html')),
+             tags$iframe(style="height:600px; width:100%; scrolling=yes", src="Informe.pdf")),
     tabPanel(title = "Acerca de",
+             HTML("<center>"),
              h3("Integrantes:"),
              br(),
              h4("Yeison Yovani Ocampo Naranjo - Estadística"),
              h4("Brahian Cano Urrego - Estadística"),
              h4("Daniel Alexander Cano Cuartas - Ingeniería de Sistemas e Informática"),
              h4("Sebastián Pino Sanchez - Ingeniería de Sistemas e Informática"),
-             HTML('<iframe width="560" height="315" src="https://www.youtube.com/embed/PXBPiBdgG4M" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>')
+             HTML('<iframe width="560" height="315" src="https://www.youtube.com/embed/PXBPiBdgG4M" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>'),
+             HTML("</center>")
     )
     
   )
