@@ -5,8 +5,8 @@ account: spinos
 server: shinyapps.io
 hostUrl: https://api.shinyapps.io/v1
 appId: 312319
-bundleId: 1310917
+bundleId: 1311193
 url: https://spinos.shinyapps.io/Entrega2TAE/
-when: 1523318210.40464
+when: 1523340269.67896
 asMultiple: FALSE
 asStatic: FALSE
